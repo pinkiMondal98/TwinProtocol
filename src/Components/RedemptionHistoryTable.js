@@ -13,12 +13,12 @@ import activity4 from "../assets/images/brands/bitbucket.png";
 import activity5 from "../assets/images/brands/mail_chimp.png";
 
 const data = [
-  [1, "12/09/2022", "amazon card", "$ 50", 500, "4358"],
-  [2, "11/10/2022", "spotify card", "$ 80", 34, "8358"],
-  [3, "15/12/2022", "twin event", "$ 30", 243, "8658"],
-  [4, "21/09/2022", "amazon card", "$ 60", 354, "5358"],
-  [5, "21/09/2022", "spotify card", "$ 30", 450, "5358"],
-  [6, "21/09/2022", "twin event", "$ 80", 504, "5358"],
+  [1, "12/09/2022", "Gift Card", "amazon", "$ 50", 500, "4358"],
+  [2, "11/10/2022", "Gift Card", "spotify", "$ 80", 34, "8358"],
+  [3, "15/12/2022", "Event", "twin", "$ 30", 243, "8658"],
+  [4, "21/09/2022", "Gift Card", "amazon", "$ 60", 354, "5358"],
+  [5, "21/09/2022", "Gift Card", "spotify", "$ 30", 450, "5358"],
+  [6, "21/09/2022", "Event", "twin", "$ 80", 504, "5358"],
 ];
 
 const scanLink = `https://etherscan.io/tx/0xfa430d80e107aeb588cf54f8112af0e5bccf5019a957222998a37715e1a015c4`;
@@ -40,24 +40,26 @@ export const RedemptionHistory = () => {
             columns={[
               { name: "S.No.", width: "70px" },
               { name: "Date", width: "100px" },
+              { name: "Type", width: "200px" },
+
               {
-                name: "Type",
+                name: "Type Details",
                 width: "200px",
                 formatter: (cell) =>
                   _(
                     <div className="d-flex align-items-center gap-2">
                       <div className="d-flex align-items-center justify-content-center">
-                        {cell == "amazon card" && (
+                        {cell == "amazon" && (
                           <center className="badge badge-border text-warning">
                             {cell}
                           </center>
                         )}
-                        {cell == "spotify card" && (
+                        {cell == "spotify" && (
                           <center className="badge badge-border text-success">
                             {cell}
                           </center>
                         )}
-                        {cell == "twin event" && (
+                        {cell == "twin" && (
                           <center className="badge badge-border text-info">
                             {cell}
                           </center>
@@ -68,7 +70,7 @@ export const RedemptionHistory = () => {
               },
               {
                 name: "Amount",
-                width: "270px",
+                width: "150px",
                 formatter: (cell) =>
                   _(
                     <div
