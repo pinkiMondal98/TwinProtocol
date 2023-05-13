@@ -5,7 +5,7 @@ import { Card, CardBody, Col, Row } from "reactstrap";
 import { ecomWidgets } from "./data/index.js";
 
 import sophiaverse1 from "../../../assets/images/demo/sophia12.gif";
-import sophiaverse2 from "../../../assets/images/demo/community-mindplex.gif";
+import nova from "../../../assets/images/demo/nova.webp";
 
 const Widgets = () => {
   const history = useNavigate();
@@ -18,12 +18,13 @@ const Widgets = () => {
             <img
               className=""
               alt="200x200"
-              width="100%"
-              src={sophiaverse2}
+              width="90%"
+              height="125px"
+              src={nova}
             ></img>
           </Col>
           {ecomWidgets.map((item, key) => (
-            <Col xl={2} md={2} key={key}>
+            <Col xl={3} md={2} key={key}>
               <Card
                 className="card-animate"
                 onClick={() => {
@@ -75,7 +76,6 @@ const Widgets = () => {
                 </CardBody>
               </Card>
             </Col>
-            
           ))}
           <Col xl={1} md={1}></Col>
         </Row>

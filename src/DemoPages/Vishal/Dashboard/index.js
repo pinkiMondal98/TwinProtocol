@@ -112,9 +112,7 @@ const Dashboard = () => {
 
   return (
     <React.Fragment>
-      <div
-        className="page-content"
-      >
+      <div className="page-content">
         <Container fluid>
           <Row>
             <Col>
@@ -202,11 +200,11 @@ const Dashboard = () => {
                             <div className="flex-grow-1">
                               <h5 className="mb-1 fs-15">
                                 <Link to="#" className="text-dark">
-                                  {item.label}
+                                  Refer a friend
                                 </Link>
                               </h5>
                               <p className="text-white text-truncate-two-lines mb-3">
-                                {item.caption}
+                                Refer a friend to earn points
                               </p>
                             </div>
                             {/* <img src={Bgd} alt="" className="img-fluid" /> */}
