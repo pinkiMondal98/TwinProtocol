@@ -174,17 +174,6 @@ const userData = [
 
 const ecomWidgets = [
   {
-    id: 4,
-    cardColor: "info",
-    label: "Balance Points",
-    counter: "865",
-    bgcolor: "danger",
-    icon: "bx bx-wallet",
-    decimals: 0,
-    prefix: "",
-    suffix: "",
-  },
-  {
     id: 1,
     cardColor: "primary",
     label: "Total Earned Points",

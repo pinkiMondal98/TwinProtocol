@@ -6,6 +6,8 @@ import perk from "../assets/images/companies/img-7.png";
 import logoDark from "../assets/images/logo-dark.png";
 import logoLight from "../assets/images/logo-light.png";
 import sophiaLogo from "../assets/images/demo/mindplex.svg"
+import twinLogo from "../assets/images/demo/twinLogo.webp"
+import twinText from "../assets/images/demo/twinprotocolLogo.webp"
 import clientText from "../assets/images/demo/mindplexTxt.png"
 
 //Import Components
@@ -39,21 +41,21 @@ const Sidebar = ({ layoutType }) => {
         <div className="navbar-brand-box">
           <Link to="/" className="logo logo-dark">
             <span className="logo-sm" >
-              <img src={sophiaLogo} alt="" className="rounded-circle   avatar-xs shadow" />
+              <img src={twinLogo} alt="" className="rounded-circle   avatar-xs shadow" />
             </span>
             <span className="logo-lg">
-              <img src={sophiaLogo} alt="" className="rounded-circle   avatar-xs shadow" />
-              <img src={clientText} alt="" />
+              <img src={twinLogo} alt="" className="rounded-circle   avatar-xs shadow" />
+              <img src={twinText} alt="" style={{width: '8rem',paddingLeft: '0.5rem' }}/>
             </span>
           </Link>
 
           <Link to="/" className="logo logo-light">
             <span className="logo-sm">
-              <img src={sophiaLogo} alt="" className="rounded-circle   avatar-xs shadow" />
+              <img src={twinLogo} alt="" className="rounded-circle   avatar-xs shadow" />
             </span>
             <span className="logo-lg">
-              <img src={sophiaLogo} alt="" className="rounded-circle   avatar-xs shadow" />
-              <img src={clientText} alt="" />
+              <img src={twinLogo} alt="" className="rounded-circle   avatar-xs shadow" />
+              <img src={twinText} alt="" style={{width: '8rem',paddingLeft: '0.5rem' }}/>
             </span>
           </Link>
           <button

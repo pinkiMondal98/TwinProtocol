@@ -4,7 +4,7 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap
 
 //import images
 import perk from "../assets/images/nft/img-06.jpg";
-
+import avatar1 from "../assets/images/users/avatar-1.jpg";
 const ProfileDropdown = () => {
 
 
@@ -18,7 +18,7 @@ const ProfileDropdown = () => {
             <Dropdown isOpen={isProfileDropdown} toggle={toggleProfileDropdown} className="ms-sm-3 header-item topbar-user">
                 <DropdownToggle tag="button" type="button" className="btn shadow-none">
                     <span className="d-flex align-items-center">
-                        <img className="rounded-circle header-profile-user" src={perk}
+                        <img className="rounded-circle header-profile-user" src={avatar1}
                             alt="Header Avatar" />
                         <span className="text-start ms-xl-2">
                             <span className="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Alex Smith</span>

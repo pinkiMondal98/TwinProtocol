@@ -1,13 +1,13 @@
 import React from 'react';
 // import withRouter from '../../Components/Common/withRouter';
 import withRouter from '../../Common/withRouter'
-import loginBackground from '../../../assets/images/demo/mindplex.jpg'
+import loginBackground from '../../../assets/images/demo/twinbg2.webp'
 
 const ParticlesAuth = ({ children }) => {
     return (
         <React.Fragment>
-            <div className="auth-page-wrapper pt-5">
-                <div className="auth-one-bg-position" id="auth-particles" style={{backgroundImage:"url(" + loginBackground + ")", backgroundPosition: "center",backgroundSize: "cover"}}>
+            <div className="auth-page-wrapper">
+                <div className="auth-one-bg-position" id="auth-particles" style={{background:'linear-gradient(90deg, #076DB1 0%, #9CC8E5 100%)'}}>
 
                     <div className="bg-overlay"></div>
 

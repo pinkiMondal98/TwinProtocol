@@ -13,15 +13,73 @@ import activity4 from "../assets/images/brands/bitbucket.png";
 import activity5 from "../assets/images/brands/mail_chimp.png";
 import { Link } from 'react-router-dom';
 
-const data = [
-    [1,"AI Code", "Write an AI code to fetch last 5 transactions to earn points","12/09/2022",500, '4358'],
-    [2,"Tell us about Mindplex", "Let us know about the different dimensions they work on","11/10/2022",34, '8358'],
-    [3,"Awareness", "Build something to spread the awareness of Mindplex magazine","15/12/2022",243, '8658'],
-    [4,"Join our business", "Help people to interact or collaborate here.","21/09/2022",354,'5358'],
-    [5,"Watch a Video", "Help people to get the right information.", "13/08/2022",232,'1234'],
-    [6, "Join our business", "Help people to interact or collaborate here.", "22/09/2022",500, '2358'],
-    [7,"Watch a Video", "Help people to get the right information.", "23/08/2022",321,'4334'],
+// const data = [
+//     [1,"AI Code", "Write an AI code to fetch last 5 transactions to earn points","12/09/2022",500, '4358'],
+//     [2,"Tell us about Mindplex", "Let us know about the different dimensions they work on","11/10/2022",34, '8358'],
+//     [3,"Awareness", "Build something to spread the awareness of Mindplex magazine","15/12/2022",243, '8658'],
+//     [4,"Join our business", "Help people to interact or collaborate here.","21/09/2022",354,'5358'],
+//     [5,"Watch a Video", "Help people to get the right information.", "13/08/2022",232,'1234'],
+//     [6, "Join our business", "Help people to interact or collaborate here.", "22/09/2022",500, '2358'],
+//     [7,"Watch a Video", "Help people to get the right information.", "23/08/2022",321,'4334'],
 
+// ];
+const data = [
+  [
+    1,
+    "Learn to earn",
+    "Learn a technology to earn points",
+    "12/09/2022",
+    500,
+    "4358",
+  ],
+  [
+    2,
+    "Refer a friend",
+    "Refer a friend to earn points",
+    "11/10/2022",
+    34,
+    "8358",
+  ],
+  [
+    3,
+    "Attend an event",
+    "Attend events to earn points",
+    "15/12/2022",
+    243,
+    "8658",
+  ],
+  [
+    4,
+    "Make training data public",
+    "Upload data and make it public",
+    "21/09/2022",
+    354,
+    "5358",
+  ],
+  [
+    5,
+    "Appear for  test",
+    "Take a test to earn points",
+    "13/08/2022",
+    232,
+    "1234",
+  ],
+  [
+    6,
+    "Make training data public",
+    "Upload data and make it public",
+    "22/09/2022",
+    500,
+    "2358",
+  ],
+  [
+    7,
+    "Appear for  test",
+    "Take a test to earn points.",
+    "23/08/2022",
+    321,
+    "4334",
+  ],
 ];
 
 const scanLink = `https://etherscan.io/tx/0xfa430d80e107aeb588cf54f8112af0e5bccf5019a957222998a37715e1a015c4`;
@@ -29,7 +87,8 @@ const scanLink = `https://etherscan.io/tx/0xfa430d80e107aeb588cf54f8112af0e5bccf
 export const ActivityTable = () => {
     document.title = 'Dashboard | Mindplex '
   return (
-        <Card>
+    <Col className='m-2'>
+    <Card>
         <CardHeader>
             <h4 className="card-title mb-0 flex-grow-1"> <i className='bx bx-history'></i> Activities
               <button type="button" className="btn btn-soft-info btn-sm float-end">
@@ -47,11 +106,11 @@ export const ActivityTable = () => {
                 width:"200px",
                 formatter : (cell) => _(<a href="/activities/activity-detail" style={{pointerEvents:'auto'}}><div className="d-flex align-items-center gap-2">
                                             <div className="d-flex align-items-center">
-                                                {cell=="AI Code" && <img src={activity1} alt="" className="avatar-xxs rounded-circle me-2" /> }
-                                                {cell=='Tell us about Mindplex' && <img src={activity2} alt="" className="avatar-xxs rounded-circle me-2" />  }
-                                                {cell=='Awareness' && <img src={activity3} alt="" className="avatar-xxs rounded-circle me-2" />  }
-                                                {cell=='Join our business' && <img src={activity4} alt="" className="avatar-xxs rounded-circle me-2" />  }
-                                                {cell=='Watch a Video' && <img src={activity5} alt="" className="avatar-xxs rounded-circle me-2" />  }
+                                                {cell=="Learn to earn" && <img src={activity1} alt="" className="avatar-xxs rounded-circle me-2" /> }
+                                                {cell=='Refer a friend' && <img src={activity2} alt="" className="avatar-xxs rounded-circle me-2" />  }
+                                                {cell=='Appear for  test' && <img src={activity3} alt="" className="avatar-xxs rounded-circle me-2" />  }
+                                                {cell=='Make training data public' && <img src={activity4} alt="" className="avatar-xxs rounded-circle me-2" />  }
+                                                {cell=='Attend an event' && <img src={activity5} alt="" className="avatar-xxs rounded-circle me-2" />  }
                                                 {`${cell}`}
                                             </div>
                                         </div></a>)
@@ -66,6 +125,7 @@ export const ActivityTable = () => {
                 />
             </div>
         </CardBody>
-    </Card>
+      </Card>
+    </Col>
   )
 }

@@ -51,7 +51,7 @@ export const ActivityList = () => {
         </div>
       </CardBody>
     </Card>
-     <ActivityTable/> 
+    <ActivityTable/>
     </div>
   )
 }

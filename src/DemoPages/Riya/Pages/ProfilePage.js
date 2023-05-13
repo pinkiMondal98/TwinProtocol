@@ -33,11 +33,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import CountUp from "react-countup";
 
-import profileBg from "../../../assets/images/demo/banner1.jpg";
-import clientLogo from "../../../assets/images/demo/mindplex.svg";
+import profileBg from "../../../assets/images/demo/SingularityNet1.png";
+import clientLogo from "../../../assets/images/demo/SingularityNetLogo.png";
 import sophiaLogo from "../../../assets/images/demo/sophiaVerse4.jpg";
 import foodSharing from "../../../assets/images/demo/foodSharing.jpg";
-
+import twinLogo from "../../../assets/images/demo/twinLogo.webp";
 import avatar1 from "../../../assets/images/users/avatar-1.jpg";
 import { EditProfileForm } from "./EditProfileForm";
 import Avatar from "../../../Components/Avatar";
@@ -79,11 +79,11 @@ export const ProfilePage = () => {
       <div className="page-content">
         <Container fluid>
           <div className="profile-foreground position-relative mx-n4 mt-n4">
-            <div className="profile-wid-bg" style={{opacity:"0.5"}}>
+            <div className="profile-wid-bg">
               <img src={profileBg} alt="" className="profile-wid-img" />
             </div>
           </div>
-          <div className="pt-4 mb-4 mb-lg-3 pb-lg-2">
+          <div className="pt-4 mb-2 mb-lg-2 pb-lg-2">
             <Row className="g-4 mt-2">
               <div
                 className="col-auto"
@@ -116,21 +116,29 @@ export const ProfilePage = () => {
               <Col>
                 <div className="p-2">
                   <h3 className="text-white mb-1">Alex Smith</h3>
-                  <p className="text-white">
+                  {/* <p className="text-white">
                     alexSmith@gmail.com
                     <span className="p-2">
                       <i className="ri-wallet-line me-2 text-white fs-16 align-middle"></i>
                       BX12654764576
                     </span>
-                  </p>
+                  </p> */}
+                  <div className="hstack text-white gap-1">
+                    <div className="me-2">
+                      <i className="bx bx-envelope me-2 text-white fs-16 align-middle"></i>
+                      alexSmith@gmail.com
+                    </div>
+                  </div>
                   <div className="hstack text-white gap-1">
                     <div className="me-2">
                       <i className="ri-map-pin-user-line me-2 text-white fs-16 align-middle"></i>
                       California, United States
                     </div>
-                    <div>
+                  </div>
+                  <div className="hstack text-white gap-1">
+                    <div className='me-2'>
                       <i className="ri-building-line me-2 text-white fs-16 align-middle"></i>
-                      Mindplex
+                      Singularity Net
                     </div>
                   </div>
                 </div>
@@ -159,15 +167,15 @@ export const ProfilePage = () => {
                 </Row>
               </Col>
             </Row>
-            <Row className="g-4">
+            <Row className="g-4 mt-3">
               {/* <Col className='col-4'></Col> */}
               <Col className="col-12">
-                <Row className="text text-white text-center">
+                <Row className="text text-dark text-center">
                   {/* <Col lg={3} xs={12}></Col> */}
                   <Col lg={3} xs={12}>
-                    <Card className="card-animate card-dark">
+                    <Card className="card-animate ">
                       <div className="p-2">
-                        <h4 className="text-white mb-2 fs-20">Mindplex</h4>
+                        <h4 className=" mb-2 fs-20">Singularity Net</h4>
                         <div className="fs-14 mb-0">
                           {/* <div className='avatar-sm flex-shrink-0'> */}
                           <Row>
@@ -195,46 +203,46 @@ export const ProfilePage = () => {
                     </Card>
                   </Col>
                   <Col lg={6} xs={12}>
-                    <Card className="card-animate card-dark">
+                    <Card className="card-animate text-dark">
                       <div className="p-2">
-                        <h4 className="text-white mb-2 fs-20">Wallet Info</h4>
+                        <h4 className="mb-2 fs-20">Wallet Info</h4>
                         <div className="fs-14 mb-0">
-							<Row>
-								<Col lg={6}>
-									<div className="d-flex align-items-center mb-1" id="wallet-card" style={{ gap: "1rem"}}>
-										<div className="avatar-sm flex-shrink-0">
-											<span className="avatar-title bg-primary rounded-circle fs-16 text-white shadow">
-												<i className="bx bx-wallet "></i>
-											</span>
-										</div>
-										<div className="d-flex align-items-end justify-content-between mt-2">Points
-											<span className="counter-value" style={{ marginLeft: "1rem" }}>
-												<CountUp start={0} end={559526} separator={","} decimals={0} duration={4}/>
-											</span>
-										</div>
-									</div>
-								</Col>
-								<Col lg={6}>
-									<div className="d-flex align-items-center mb-1" style={{ gap: "1rem" }}>
-										<div className="avatar-sm flex-shrink-0">
-											<span className="avatar-title bg-danger rounded-circle fs-16 text-white shadow">
-												<i className="bx bx-pin"></i>
-											</span>
-										</div>
-										<div className="d-flex align-items-end justify-content-between mt-2" style={{ overflow: "auto" }} >ID
-											<span style={{ marginLeft: "1rem" }}>BX12654764576</span>
-										</div>
-									</div>
-								</Col>
-							</Row>
+                          <Row>
+                            <Col lg={6}>
+                              <div className="d-flex align-items-center mb-1" id="wallet-card" style={{ gap: "1rem"}}>
+                                <div className="avatar-sm flex-shrink-0">
+                                  <span className="avatar-title bg-primary rounded-circle fs-16 text-white shadow">
+                                    <i className="bx bx-wallet "></i>
+                                  </span>
+                                </div>
+                                <div className="d-flex align-items-end justify-content-between mt-2">Points
+                                  <span className="counter-value" style={{ marginLeft: "1rem" }}>
+                                    <CountUp start={0} end={559526} separator={","} decimals={0} duration={4}/>
+                                  </span>
+                                </div>
+                              </div>
+                            </Col>
+                            <Col lg={6}>
+                              <div className="d-flex align-items-center mb-1" style={{ gap: "1rem" }}>
+                                <div className="avatar-sm flex-shrink-0">
+                                  <span className="avatar-title bg-danger rounded-circle fs-16 text-white shadow">
+                                    <i className="bx bx-pin"></i>
+                                  </span>
+                                </div>
+                                <div className="d-flex align-items-end justify-content-between mt-2" style={{ overflow: "auto" }} >ID
+                                  <span style={{ marginLeft: "1rem" }}>BX12654764576</span>
+                                </div>
+                              </div>
+                            </Col>
+                          </Row>
                         </div>
                       </div>
                     </Card>
                   </Col>
                   <Col lg={3} xs={12}>
-                    <Card className="card-animate card-dark mb-0">
+                    <Card className="card-animate text-dark mb-0">
                       <div className="p-2">
-                        <h4 className="text-white mb-2 fs-20">Sophia Verse</h4>
+                        <h4 className=" mb-2 fs-20">Twin Protocol</h4>
                         <div className="fs-14 mb-0">
                           <Row>
                             <Col className="col-6">
@@ -244,7 +252,7 @@ export const ProfilePage = () => {
                               >
                                 <span className="logo-sm">
                                   <img
-                                    src={sophiaLogo}
+                                    src={twinLogo}
                                     alt=""
                                     className="avatar-title rounded-circle   avatar-xs shadow"
                                   />
