@@ -13,10 +13,12 @@ import activity4 from "../assets/images/brands/bitbucket.png";
 import activity5 from "../assets/images/brands/mail_chimp.png";
 
 const data = [
-  [1, "12/09/2022", "Gift Card", "$ 50", 500, "4358"],
-  [2, "11/10/2022", "Donation", "$ 80", 34, "8358"],
-  [3, "15/12/2022", "Event", "$ 30", 243, "8658"],
-  [4, "21/09/2022", "Donation", "$ 50", 354, "5358"],
+  [1, "12/09/2022", "amazon card", "$ 50", 500, "4358"],
+  [2, "11/10/2022", "spotify card", "$ 80", 34, "8358"],
+  [3, "15/12/2022", "twin event", "$ 30", 243, "8658"],
+  [4, "21/09/2022", "amazon card", "$ 60", 354, "5358"],
+  [5, "21/09/2022", "spotify card", "$ 30", 450, "5358"],
+  [6, "21/09/2022", "twin event", "$ 80", 504, "5358"],
 ];
 
 const scanLink = `https://etherscan.io/tx/0xfa430d80e107aeb588cf54f8112af0e5bccf5019a957222998a37715e1a015c4`;
@@ -44,29 +46,22 @@ export const RedemptionHistory = () => {
                 formatter: (cell) =>
                   _(
                     <div className="d-flex align-items-center gap-2">
-                      <div className="d-flex align-items-center">
-                        {cell == "Gift Card" && (
-                          <img
-                            src={activity1}
-                            alt=""
-                            className="avatar-xxs rounded-circle me-2"
-                          />
+                      <div className="d-flex align-items-center justify-content-center">
+                        {cell == "amazon card" && (
+                          <center className="badge badge-border text-warning">
+                            {cell}
+                          </center>
                         )}
-                        {cell == "Event" && (
-                          <img
-                            src={activity2}
-                            alt=""
-                            className="avatar-xxs rounded-circle me-2"
-                          />
+                        {cell == "spotify card" && (
+                          <center className="badge badge-border text-success">
+                            {cell}
+                          </center>
                         )}
-                        {cell == "Donation" && (
-                          <img
-                            src={activity3}
-                            alt=""
-                            className="avatar-xxs rounded-circle me-2"
-                          />
+                        {cell == "twin event" && (
+                          <center className="badge badge-border text-info">
+                            {cell}
+                          </center>
                         )}
-                        {`${cell}`}
                       </div>
                     </div>
                   ),
