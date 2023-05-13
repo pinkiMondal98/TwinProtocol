@@ -22,7 +22,7 @@ import Dropzone from "react-dropzone";
 import { Navigate, useNavigate } from "react-router-dom";
 // import { Alert, Button, Card, CardBody, Col, Container, Input,  ModalHeader, PopoverBody, PopoverHeader, Row, UncontrolledPopover, UncontrolledTooltip } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import activityBg from '../../assets/images/demo/sophiaverse-1.png';
+import activityBg from '../../assets/images/demo/SingularityNet1.png';
 import successLogo from '../../assets/images/demo/giphy.gif';
 import activity1 from "../../assets/images/brands/slack.png";
 import classnames from "classnames";
@@ -125,12 +125,12 @@ export const ActivityDetail = () => {
               </div>
         </ModalBody>
     </Modal>
-    <Card>
+    <Card className='m-2'> 
       <CardBody>
       <div className='' style={{padding:"10px"}}>
         <Form action="#" >
             <div className="text-center">
-                <h5>Code Upload Form </h5>
+                <h5>Data Upload Form</h5>
                 <hr></hr>
             </div>
             <div>
@@ -146,8 +146,8 @@ export const ActivityDetail = () => {
                                     <img src={activity1} alt="" className="avatar-sm rounded-circle" />
                                 </div>
                                 <div className="flex-grow-1 ms-2">
-                                    <h5 className="card-title mb-1">AI Code</h5>
-                                    <p className="text-muted mb-0">Write an AI code to fetch last 5 transactions to earn points</p>
+                                    <h5 className="card-title mb-1">Upload a document</h5>
+                                    <p className="text-muted mb-0">Upload code review notes</p>
                                 </div>
                             </div>
                             {/* <h6 className="mb-1">$15,548</h6>
@@ -155,11 +155,11 @@ export const ActivityDetail = () => {
                             <Link to="#" className="btn btn-primary btn-sm">See Details</Link> */}
                         </Card>
                       <Card>
-                        <CardHeader className="card-header">
-                          <h4 className="card-title mb-0">Code Upload</h4>
-                        </CardHeader>
+                        {/* <CardHeader className="card-header">
+                          <h4 className="card-title mb-0">Upload data</h4>
+                        </CardHeader> */}
                         <CardBody>
-                          <p className="text-muted">Upload AI code here to earn 500 points.</p>
+                          {/* <p className="text-muted">Upload code review notes.</p> */}
                           <Dropzone
                             onDrop={acceptedFiles => {
                               handleAcceptedFiles(acceptedFiles);
@@ -223,14 +223,14 @@ export const ActivityDetail = () => {
                   </Row>
                 </div>
                 <div style={{display:"flex" , flexDirection:"row", flexWrap:"wrap", justifyContent:"space-around"}}>
-                <button type="button" className="mx-auto px-auto btn btn-primary waves-effect waves-light" onClick={() => setTimer(true)}>Submit Information</button>
+                <button type="button" className="mx-auto px-auto btn btn-info waves-effect waves-light" onClick={() => setTimer(true)}>Submit Information</button>
                 </div>
                 </div>
         </Form>
         </div>
       </CardBody>
     </Card>
-     <ActivityHistory/> 
+     {/* <ActivityHistory/>  */}
     </div>
   )
 }

@@ -55,8 +55,8 @@ const data = [
   ],
   [
     6,
-    "Make training data public",
-    "Upload data and make it public",
+    "Upload a document",
+    "Upload code review notes",
     "22/09/2022",
     500,
     "2358",
@@ -127,6 +127,13 @@ export const ActivityHistory = () => {
                         {cell == "Appear for  test" && (
                           <img
                             src={activity5}
+                            alt=""
+                            className="avatar-xxs rounded-circle me-2"
+                          />
+                        )}
+                        {cell == "Upload a document" && (
+                          <img
+                            src={activity1}
                             alt=""
                             className="avatar-xxs rounded-circle me-2"
                           />

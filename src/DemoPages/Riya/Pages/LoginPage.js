@@ -12,6 +12,8 @@ import {
 } from "reactstrap";
 import ParticlesAuth from "../Components/ParticlesAuth";
 import sophiaLogo from "../../../assets/images/demo/mindplex.svg";
+import twinLogo from "../../../assets/images/demo/twinLogo.webp";
+
 import { useNavigate } from "react-router-dom";
 
 //import images
@@ -22,7 +24,7 @@ const LoginPage = () => {
   const history = useNavigate();
   const logo =
     "	https://uploads-ssl.webflow.com/622c1e6eb1cd192ecedc6225/622ef0219152c96bc2ea796e_sophia-kv.jpg";
-  document.title = "SignIn | Mindplex";
+  document.title = "SignIn | Twin Protocol";
   return (
     <React.Fragment>
       <ParticlesAuth>
@@ -33,22 +35,22 @@ const LoginPage = () => {
                 <div className="text-center mt-sm-5 mb-4 text-white-50">
                   <div>
                     <Link to="/" className="d-inline-block auth-logo">
-                      <img src={sophiaLogo} alt="" height="100" />
+                      <img src={twinLogo} alt="" height="100" />
                     </Link>
                   </div>
-                  <p className="mt-3 text-white fs-15 fw-medium">Mindplex </p>
+                  <p className="mt-3 text-white fs-15 fw-medium">Twin Protocol </p>
                 </div>
               </Col>
             </Row>
 
             <Row className="justify-content-center">
               <Col md={8} lg={6} xl={5}>
-                <Card className="mt-4">
+                <Card className="mt-2">
                   <CardBody className="p-4">
                     <div className="text-center mt-2">
-                      <h5 className="text-primary">Welcome Back !</h5>
-                      <p className="text-muted">
-                        Sign in to continue to Mindplex
+                      <h5 className="text-info">Welcome Back !</h5>
+                      <p className="fw-bold">
+                        Sign in to Twin Protocol
                       </p>
                     </div>
                     <div className="p-2 mt-4">
@@ -112,10 +114,10 @@ const LoginPage = () => {
                         </div>
                         <div className="mt-4">
                           <Button
-                            color="success"
-                            className="btn btn-success w-100"
+                            color="info"
+                            className="btn btn-info w-100"
                             onClick={() => {
-                              history(`/two-step`);
+                              history(`/dashboard`);
                             }}
                             type="submit"
                           >

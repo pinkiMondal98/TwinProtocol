@@ -12,7 +12,7 @@ const Activity = () => {
                 <Container fluid>
                     <Row>
                         <Col sm={12}>
-                            <BreadCrumb title="Activities List" />
+                            {/* <BreadCrumb title="Activities List" /> */}
                             <List />
                         </Col>
 

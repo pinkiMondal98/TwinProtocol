@@ -13,15 +13,16 @@ const Widgets = () => {
     <React.Fragment>
       <Col xl={12}>
         <Row>
-          <Col xl={1} md={1}></Col>
-          <Col xl={2} md={2}>
+          <Col xl={3} md={3} >
             <img
               className=""
               alt="200x200"
-              width="90%"
+              // width="100%"
               height="125px"
               src={nova}
-            ></img>
+              style={{margin:
+                '0 5rem'}}
+            />
           </Col>
           {ecomWidgets.map((item, key) => (
             <Col xl={3} md={2} key={key}>

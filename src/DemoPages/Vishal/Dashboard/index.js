@@ -35,55 +35,6 @@ import Bgd from "../../../assets/images/bg-d.png";
 const Dashboard = () => {
   // const headerImage ='https://uploads-ssl.webflow.com/622c1e6eb1cd192ecedc6225/622ef0219152c96bc2ea796e_sophia-kv.jpg';
 
-  const providerData = [1234, 1980, 1456, 1678, 1289];
-  const destinationData = [1234, 2345, 4456, 3567, 1345];
-
-  const Destination = [
-    {
-      name: "Refugees",
-      value: destinationData[0],
-    },
-    {
-      name: "Farmers",
-      value: destinationData[1],
-    },
-    {
-      name: "Charities",
-      value: destinationData[2],
-    },
-    {
-      name: "Volunteer",
-      value: destinationData[3],
-    },
-    {
-      name: "Non-profits",
-      value: destinationData[4],
-    },
-  ];
-
-  const provider = [
-    {
-      name: "Save On Foods",
-      value: providerData[0],
-    },
-    {
-      name: "Urban Fare",
-      value: providerData[1],
-    },
-    {
-      name: "Simple Goodness",
-      value: providerData[2],
-    },
-    {
-      name: "Nesters Market",
-      value: providerData[3],
-    },
-    {
-      name: "Mein Hardt",
-      value: providerData[4],
-    },
-  ];
-
   const projectLists = [
     {
       id: 1,
@@ -200,11 +151,11 @@ const Dashboard = () => {
                             <div className="flex-grow-1">
                               <h5 className="mb-1 fs-15">
                                 <Link to="#" className="text-dark">
-                                  Refer a friend
+                                  Upload a document
                                 </Link>
                               </h5>
-                              <p className="text-white text-truncate-two-lines mb-3">
-                                Refer a friend to earn points
+                              <p className="text-truncate-two-lines mb-3">
+                                Upload code review notes
                               </p>
                             </div>
                             {/* <img src={Bgd} alt="" className="img-fluid" /> */}
